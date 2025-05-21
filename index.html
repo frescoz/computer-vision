@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Vision Interattivo Dinamico</title>
+    <title>Breve storia della Computer Vision</title>
     <style>
     :root {
         --main-bg-color: #000;
@@ -594,14 +594,14 @@
 <body>
 
     <header class="site-header">
-        <h1>Computer Vision</h1>
+        <h1>Breve storia della Computer Vision</h1>
         <div id="change-image-controls">
             <button id="change-image-button">CAMBIA IMMAGINE</button>
             <input type="file" id="secondary-file-input" class="hidden-file-input" accept="image/*">
         </div>
     </header>
 
-    <div id="initial-upload-prompt">Upload image</div>
+    <div id="initial-upload-prompt">Selezione immagine</div>
     <input type="file" id="primary-file-input" class="hidden-file-input" accept="image/*">
 
     <div id="main-content-wrapper">
@@ -620,16 +620,21 @@
         </div>
 
         <div class="content-block">
-            <p>La Computer Vision è una disciplina dell'informatica che si occupa di permettere ai computer di "vedere", ovvero di interpretare e comprendere il contenuto di immagini e video digitali. Nata inizialmente come un ramo dell'intelligenza artificiale (IA), la computer vision si è evoluta rapidamente grazie ai progressi nel campo del machine learning, dell'hardware e della disponibilità di grandi quantità di dati.</p>
-            <p>Dalle prime sperimentazioni degli anni '60, in cui i sistemi cercavano di riconoscere semplici forme geometriche, siamo arrivati a tecnologie avanzate in grado di riconoscere volti, leggere il linguaggio del corpo, analizzare scenari complessi e guidare veicoli autonomi. Questa evoluzione è stata resa possibile dall'integrazione di modelli matematici, reti neurali profonde e potenti risorse computazionali.</p>
-            <p>La presente ricerca si propone di ripercorrere le tappe fondamentali dello sviluppo della computer vision, analizzando i principali approcci teorici tramite appositi laboratori per scoprire come questa disciplina si è trasformata in un pilastro centrale dell'innovazione tecnologica contemporanea.</p>
+            <p>La Computer Vision è una disciplina dell'informatica che si occupa di permettere ai computer di "vedere", ovvero di interpretare e comprendere il contenuto di immagini e video digitali. Si è evoluta rapidamente grazie all’avanzamento tecnologico dell’hardware e all’introduzione di tecnologie come il machine learning e le reti neurali.</p>
+            <p>La presente ricerca si propone di ripercorrere le tappe fondamentali dello sviluppo della computer vision, analizzando i principali approcci teorici tramite appositi laboratori.</p>
         </div>
 
         <div class="full-bleed-separator"></div>
+        <div class="content-block" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0; margin-bottom: 0;">
+            <h2>Primi approcci teorici</h2>
+        </div>
+        
+        <div class="full-bleed-separator"></div>
+
         <div class="content-block technique-entry sobel-section-block" data-demo-type="sobel">
-            <h2>Primi Tentativi e Riconoscimento di Forme (Anni '60-'70)</h2>
-            <p>Negli anni '60 e '70 la computer vision muoveva i suoi primi passi, concentrandosi soprattutto sul riconoscimento di forme geometriche semplici e sulla segmentazione di immagini. In questo periodo pionieristico, ricercatori come Larry Roberts e altri iniziarono a esplorare metodi per estrarre informazioni strutturali da immagini bidimensionali, tentando di ricostruire la percezione tridimensionale a partire da bordi, linee e contorni.
-                Uno degli approcci più emblematici sviluppati in quegli anni fu l'utilizzo di operatori per il rilevamento dei bordi, come il filtro di Sobel. Questo metodo consente di evidenziare i cambiamenti di intensità nei pixel, facilitando la localizzazione dei contorni degli oggetti. Per comprendere meglio l’efficacia di queste tecniche storiche, il laboratorio interattivo allegato a questa ricerca permette di visualizzare i bordi rilevati in un'immagine utilizzando proprio l'operatore di Sobel. Questo strumento offre un’esperienza diretta sui fondamenti della visione artificiale, simulando le analisi che i primi ricercatori effettuavano manualmente o con hardware molto limitato.</p>
+            <h2>Riconoscimento dei bordi</h2>
+            <p>Intorno agli anni ‘60 la computer vision diventa tema di ricerche esclusivamente teoriche; quest’ultime puntavano ad estrapolare informazioni da immagini 2d tentando di riconoscere la percezione tridimensionale a partire da bordi, linee e contorni.</p>
+            <p> Uno degli approcci più significativi dell’epoca fu l’utilizzo dell’algoritmo di Sobel, il suo funzionamento consiste nella conversione dell’immagine in scala di grigi e successivamente nell’analisi della variazione di colore tra i pixel. Quando questa variazione supera una determinata soglia, data dal valore K, evidenzia il punto rilevato in bianco.</p>
             <div class="sobel-demonstration">
                 <div class="image-comparison-container">
                     <div class="image-container" id="grayscale-image-wrapper">
@@ -654,10 +659,9 @@
         </div>
         <div class="full-bleed-separator"></div>
         <div class="content-block technique-entry" id="object-recognition-ml-section" data-demo-type="object-recognition">
-            <h2>Riconoscimento di Oggetti e Machine Learning (Anni '90-'2000)</h2>
-            <p>A partire dagli anni '90, la computer vision ha iniziato a evolversi rapidamente grazie all'integrazione con tecniche di machine learning. L’attenzione si è spostata dal semplice rilevamento di bordi e contorni alla classificazione e al riconoscimento di oggetti più complessi all'interno di un’immagine. In questa fase, si sono sviluppati algoritmi capaci di estrarre feature significative da immagini semplificate, rappresentando oggetti attraverso descrittori robusti e compatti.
-                Per facilitare l’identificazione automatica, le immagini venivano spesso trasformate in versioni "banalizzate", ovvero ridotte a rappresentazioni essenziali, in cui i dettagli superflui venivano eliminati per concentrare l'attenzione sulle forme principali. In parallelo, tecniche come il blob detection permettevano di individuare aree coerenti nell'immagine, basandosi su variazioni di intensità e forma. Questi blob, aggregati di pixel con caratteristiche simili, rappresentavano potenziali oggetti da riconoscere.
-                Il laboratorio interattivo associato a questa sezione mostra proprio questi due passaggi fondamentali: da un lato, una versione semplificata dell’immagine originale; dall’altro, il risultato del rilevamento dei blob. Questo strumento consente di esplorare visivamente come la visione artificiale di quegli anni cercasse di “vedere” gli oggetti nel mondo reale, costruendo le basi per le tecnologie odierne di riconoscimento automatico.</p>
+            <h2>Aree di interesse</h2>
+            <p>Dagli anni ‘90 lo studio sulla computer vision sperimenta nuovi approcci relativi al riconoscimento di oggetti.</p>
+            <p>I principali sviluppi si sono verificati grazie all’uso della binarizzazione, che permette di semplificare l’immagine in soli bianchi e neri assoluti da una prima in scala di grigi, così da ottenere una prima divisione per caratteristiche comuni; il sistema di binarizzazione trasforma in nero assoluto ogni pixel sotto una determinata soglia, e in bianchi assoluti quelli sopra quest’ultima. In parallelo, anche tecniche come il blob detection permettevano di individuare aree coerenti nell'immagine, basandosi su variazioni di intensità e forma, riconoscendo aggregati di pixel con caratteristiche simili, ed evidenziandoli.</p>
 
             <div class="multi-canvas-demo-container">
                 <div class="canvas-item">
@@ -688,31 +692,9 @@
         <div class="full-bleed-separator"></div>
 
         <div class="content-block technique-entry" id="image-segmentation-section" data-demo-type="segmentation">
-            <h2>Segmentazione delle Immagini: Dividere per Comprendere</h2>
+            <h2>Segmentazione delle immagini</h2>
             <p>
-                La 
-                <strong>segmentazione delle immagini</strong>
-                 è un processo fondamentale nella computer vision che consiste nel suddividere un'immagine digitale in più regioni o segmenti (insiemi di pixel). L'obiettivo è semplificare o cambiare la rappresentazione di un'immagine in qualcosa di più significativo e facile da analizzare. Ogni pixel in una regione condivide alcune caratteristiche comuni, come il colore, l'intensità o la texture.
-            </p>
-            <p>Esistono diversi tipi di segmentazione:</p>
-            <ul>
-                <li>
-                    <strong>Segmentazione Semantica:</strong>
-                     Assegna a ogni pixel dell'immagine una etichetta di classe (es. "strada", "auto", "persona", "cielo"). Tutti i pixel appartenenti alla stessa classe ricevono la stessa etichetta.
-                </li>
-                <li>
-                    <strong>Segmentazione Istanza:</strong>
-                     Simile alla semantica, ma distingue le diverse istanze di oggetti della stessa classe (es. "auto 1", "auto 2", "persona A", "persona B").
-                </li>
-                <li>
-                    <strong>Segmentazione Panottica:</strong>
-                     Combina la segmentazione semantica e quella istanza, fornendo sia l'etichetta di classe che l'identificatore di istanza per ogni pixel.
-                </li>
-            </ul>
-            <p>
-                Di seguito, una dimostrazione semplificata di segmentazione basata sul raggruppamento dei colori (clustering) utilizzando un approccio simile all'algoritmo K-Means. L'immagine viene processata per ridurre il numero di colori distinti, creando regioni basate sulla similarità cromatica. 
-                <strong>Nota:</strong>
-                 l'applicazione di K-Means all'intera immagine potrebbe richiedere alcuni secondi, specialmente per immagini di grandi dimensioni.
+                Un ulteriore passo avanti nel riconoscimento delle aree d’interesse è stata la segmentazione delle immagini tramite raggruppamento dei colori (clustering) utilizzando un approccio simile all'algoritmo K-Means; tale procedimento suddivide l’immagine in K raggruppamenti a cui vengono assegnati dei colori, uno per ogni gruppo K.
             </p>
             <div class="segmentation-demonstration" style="display: flex; flex-direction: column; align-items: center;">
                 <div class="multi-canvas-demo-container" id="segmentation-canvases">
@@ -739,13 +721,15 @@
         </div>
 
         <div class="full-bleed-separator"></div>
+        <div class="content-block" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0; margin-bottom: 0;">
+            <h2>Le nuove tecnologie</h2>
+        </div>
+        
+        <div class="full-bleed-separator"></div>
         <div class="content-block technique-entry" id="machine-learning-section" data-demo-type="machine-learning">
-            <h2>Machine Learning: L'Apprendimento Automatico</h2>
+            <h2>Machine Learning</h2>
             <p>
-                Il <strong>Machine Learning</strong> è un ramo dell'intelligenza artificiale che permette ai computer di imparare dai dati senza essere esplicitamente programmati. Attraverso algoritmi che migliorano automaticamente con l'esperienza, i sistemi di machine learning possono identificare pattern, fare previsioni e prendere decisioni basate sui dati.
-            </p>
-            <p>
-                Il processo di apprendimento automatico tipicamente coinvolge la raccolta di dati, l'estrazione di caratteristiche rilevanti, l'addestramento di un modello su questi dati e infine l'utilizzo del modello addestrato per fare previsioni su nuovi dati. Questa capacità di generalizzare da esempi è ciò che rende il machine learning così potente in ambiti come la computer vision.
+                Il machine learning è una branca dell'intelligenza artificiale (AI) che si propone di consentire a computer e macchine di eseguire compiti in modo autonomo e di migliorare le proprie prestazioni e la propria precisione attraverso l'esperienza e l'esposizione a una maggiore quantità di dati.
             </p>
 
             <div id="ml-animation-container">
@@ -1110,23 +1094,10 @@
 
         <div class="full-bleed-separator"></div>
         <div class="content-block technique-entry" id="neural-network-section" data-demo-type="neural-network">
-            <h2>Reti Neurali: Il Cervello Artificiale</h2>
+            <h2>Reti Neurali</h2>
             <p>
-                Le <strong>reti neurali artificiali</strong> sono modelli computazionali ispirati al funzionamento del cervello umano. Sono composte da unità di elaborazione interconnesse (neuroni) organizzate in strati che trasformano i dati di input in output significativi attraverso un processo di apprendimento.
-            </p>
-            <p>
-                Una rete neurale tipica è composta da:
-            </p>
-            <ul>
-                <li><strong>Strato di input:</strong> Riceve i dati grezzi (come pixel di un'immagine)</li>
-                <li><strong>Strati nascosti:</strong> Elaborano le informazioni attraverso connessioni pesate</li>
-                <li><strong>Strato di output:</strong> Produce il risultato finale (come la classificazione di un'immagine)</li>
-            </ul>
-            <p>
-                Durante l'addestramento, la rete impara a riconoscere pattern complessi modificando i pesi delle connessioni tra i neuroni. Questo processo, chiamato <strong>backpropagation</strong>, permette alla rete di migliorare progressivamente le sue prestazioni.
-            </p>
-            <p>
-                Di seguito, una visualizzazione interattiva di una rete neurale in azione. L'animazione mostra come l'informazione fluisce attraverso i diversi strati della rete, dall'input all'output.
+                Una rete neurale è un modello che prende decisioni in modo simile al cervello umano, utilizzando processi che imitano il modo in cui i neuroni biologici lavorano insieme per identificare fenomeni, valutare opzioni e trarre conclusioni.
+Durante l'addestramento (machine learning), la rete impara a riconoscere pattern complessi modificando i pesi delle connessioni tra i neuroni. Questo processo, chiamato backpropagation, permette alla rete di migliorare progressivamente le sue prestazioni.
             </p>
 
             <div id="neural-network-container" style="position: relative;">
@@ -1254,6 +1225,13 @@
                 });
             })();
             </script>
+        </div>
+
+        <div class="full-bleed-separator"></div>
+        <div class="content-block technique-entry">
+            <h2>Conclusioni</h2>
+            <p>Sebbene la computer vision abbia radici profonde in decenni di ricerca algoritmica, è stata l'integrazione con il Machine Learning e con le Reti Neurali, ad determinato la vera rivoluzione in questo ambito, trasformandola in una delle discipline più dinamiche, versatili e impattanti dell'intelligenza artificiale.
+            </p>
         </div>
     </div>
 
@@ -3028,3 +3006,5 @@
     </script>
 </body>
 </html>
+
+
